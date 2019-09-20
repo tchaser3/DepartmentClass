@@ -65,6 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindDepartmentEmployeesDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindDepartmentHourlyEmployeesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDepartmentHourlyEmployeesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindSortedDepartmentDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +132,17 @@
     </None>
     <None Include="FindDepartmentEmployeesDataSet.xss">
       <DependentUpon>FindDepartmentEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDepartmentHourlyEmployeesDataSet.xsc">
+      <DependentUpon>FindDepartmentHourlyEmployeesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDepartmentHourlyEmployeesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDepartmentHourlyEmployeesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDepartmentHourlyEmployeesDataSet.xss">
+      <DependentUpon>FindDepartmentHourlyEmployeesDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindSortedDepartmentDataSet.xsc">
       <DependentUpon>FindSortedDepartmentDataSet.xsd</DependentUpon>

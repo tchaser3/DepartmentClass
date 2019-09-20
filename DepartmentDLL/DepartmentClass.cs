@@ -34,8 +34,24 @@ namespace DepartmentDLL
         FindDepartmentEmployeesDataSet aFindDepartmentEmployeesDataSet;
         FindDepartmentEmployeesDataSetTableAdapters.FindDepartmentEmployeesTableAdapter aFindDepartmentEmployeesTableAdapter;
 
+        FindDepartmentHourlyEmployeesDataSet aFindDepartmentHourlyEmployeesDataSet;
+        FindDepartmentHourlyEmployeesDataSetTableAdapters.FindDepartmentHourlyEmployeesTableAdapter aFindDepartmentHourlyEmployeesTableAdapter;
 
+        public FindDepartmentHourlyEmployeesDataSet FindDepartmentHourlyEmployees(string strDepartment)
+        {
+            try
+            {
+                aFindDepartmentHourlyEmployeesDataSet = new FindDepartmentHourlyEmployeesDataSet();
+                aFindDepartmentHourlyEmployeesTableAdapter = new FindDepartmentHourlyEmployeesDataSetTableAdapters.FindDepartmentHourlyEmployeesTableAdapter();
+                aFindDepartmentHourlyEmployeesTableAdapter.Fill(aFindDepartmentHourlyEmployeesDataSet.FindDepartmentHourlyEmployees, strDepartment);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Find Department Hourly Employees " + Ex.Message);
+            }
 
+            return aFindDepartmentHourlyEmployeesDataSet;
+        }
         public FindDepartmentEmployeesDataSet FindDepartmedntEmployees(string strDepartment)
         {
             try
