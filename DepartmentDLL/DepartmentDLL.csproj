@@ -50,6 +50,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DepartmentProductionEmailDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepartmentProductionEmailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentProductionEmailProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepartmentProductionEmailProjectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindDepartmentByDepartmentIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +85,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindDepartmentHourlyEmployeesDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindDepartmentProductionEmailByDepartmentIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDepartmentProductionEmailByDepartmentIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindSortedDepartmentDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,11 +100,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertDepartmentEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InsertDepartmentProductionEmailEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertDepartmentProductionEmailEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDepartmentProductionEmailProjectEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertDepartmentProductionEmailProjectEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveDepartmentProductionEmailEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveDepartmentProductionEmailEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDepartmentProductionEmailProjectEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateDepartmentProductionEmailProjectEntry.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +139,39 @@
     </None>
     <None Include="DepartmentDataSet.xss">
       <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DepartmentProductionEmailDataSet.xsc">
+      <DependentUpon>DepartmentProductionEmailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DepartmentProductionEmailDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DepartmentProductionEmailDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DepartmentProductionEmailDataSet.xss">
+      <DependentUpon>DepartmentProductionEmailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DepartmentProductionEmailProjectsDataSet.xsc">
+      <DependentUpon>DepartmentProductionEmailProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DepartmentProductionEmailProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DepartmentProductionEmailProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DepartmentProductionEmailProjectsDataSet.xss">
+      <DependentUpon>DepartmentProductionEmailProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.xsc">
+      <DependentUpon>FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.xss">
+      <DependentUpon>FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindDepartmentByDepartmentIDDataSet.xsc">
       <DependentUpon>FindDepartmentByDepartmentIDDataSet.xsd</DependentUpon>
@@ -144,6 +217,17 @@
     <None Include="FindDepartmentHourlyEmployeesDataSet.xss">
       <DependentUpon>FindDepartmentHourlyEmployeesDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindDepartmentProductionEmailByDepartmentIDDataSet.xsc">
+      <DependentUpon>FindDepartmentProductionEmailByDepartmentIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDepartmentProductionEmailByDepartmentIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDepartmentProductionEmailByDepartmentIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDepartmentProductionEmailByDepartmentIDDataSet.xss">
+      <DependentUpon>FindDepartmentProductionEmailByDepartmentIDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindSortedDepartmentDataSet.xsc">
       <DependentUpon>FindSortedDepartmentDataSet.xsd</DependentUpon>
     </None>
@@ -166,9 +250,53 @@
     <None Include="InsertDepartmentEntry.xss">
       <DependentUpon>InsertDepartmentEntry.xsd</DependentUpon>
     </None>
+    <None Include="InsertDepartmentProductionEmailEntry.xsc">
+      <DependentUpon>InsertDepartmentProductionEmailEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDepartmentProductionEmailEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertDepartmentProductionEmailEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertDepartmentProductionEmailEntry.xss">
+      <DependentUpon>InsertDepartmentProductionEmailEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDepartmentProductionEmailProjectEntry.xsc">
+      <DependentUpon>InsertDepartmentProductionEmailProjectEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDepartmentProductionEmailProjectEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertDepartmentProductionEmailProjectEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertDepartmentProductionEmailProjectEntry.xss">
+      <DependentUpon>InsertDepartmentProductionEmailProjectEntry.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RemoveDepartmentProductionEmailEntry.xsc">
+      <DependentUpon>RemoveDepartmentProductionEmailEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveDepartmentProductionEmailEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveDepartmentProductionEmailEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveDepartmentProductionEmailEntry.xss">
+      <DependentUpon>RemoveDepartmentProductionEmailEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateDepartmentProductionEmailProjectEntry.xsc">
+      <DependentUpon>UpdateDepartmentProductionEmailProjectEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateDepartmentProductionEmailProjectEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateDepartmentProductionEmailProjectEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateDepartmentProductionEmailProjectEntry.xss">
+      <DependentUpon>UpdateDepartmentProductionEmailProjectEntry.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

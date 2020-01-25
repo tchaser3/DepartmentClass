@@ -37,6 +37,182 @@ namespace DepartmentDLL
         FindDepartmentHourlyEmployeesDataSet aFindDepartmentHourlyEmployeesDataSet;
         FindDepartmentHourlyEmployeesDataSetTableAdapters.FindDepartmentHourlyEmployeesTableAdapter aFindDepartmentHourlyEmployeesTableAdapter;
 
+        DepartmentProductionEmailDataSet aDepartmentProductionEmailDataSet;
+        DepartmentProductionEmailDataSetTableAdapters.departmentproductionemailTableAdapter aDepartmentProductionEmailTableAdatper;
+
+        InsertDepartmentProductionEmailEntryTableAdapters.QueriesTableAdapter aInsertDepartmedntProudctionEmailTableAdapter;
+
+        RemoveDepartmentProductionEmailEntryTableAdapters.QueriesTableAdapter aRemoveDepartmentProductionEmailTableAdapter;
+
+        FindDepartmentProductionEmailByDepartmentIDDataSet aFindDepartmentProductionEmailByDepartmentIDDataSet;
+        FindDepartmentProductionEmailByDepartmentIDDataSetTableAdapters.FindDepartmentProductionEmailByDepartmentIDTableAdapter aFindDepartmentProductionEmailByDepartmentIDTableAdapter;
+
+        DepartmentProductionEmailProjectsDataSet aDepartmentProductionEmailProjectsDataSet;
+        DepartmentProductionEmailProjectsDataSetTableAdapters.departmentproductionemailprojectsTableAdapter aDepartmentProductionEmailProjectsTableAdapter;
+
+        InsertDepartmentProductionEmailProjectEntryTableAdapters.QueriesTableAdapter aInsertDepartmentProductionEmailProjectTableAdapter;
+
+        UpdateDepartmentProductionEmailProjectEntryTableAdapters.QueriesTableAdapter aUpdateDeparmentProductionEmailProjectTableAdapter;
+
+        FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet aFindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet;
+        FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSetTableAdapters.FindActiveDepartmentProductionEmailProjectsByDepartmentIDTableAdapter aFindActiveDepartmentProductionEmailProjectsByDepartmentIDTableAdapter;
+
+        public FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet FindActiveDepartmentProductionEmailProjectsByDepartmentID(int intDepartmentID)
+        {
+            try
+            {
+                aFindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet = new FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet();
+                aFindActiveDepartmentProductionEmailProjectsByDepartmentIDTableAdapter = new FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSetTableAdapters.FindActiveDepartmentProductionEmailProjectsByDepartmentIDTableAdapter();
+                aFindActiveDepartmentProductionEmailProjectsByDepartmentIDTableAdapter.Fill(aFindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet.FindActiveDepartmentProductionEmailProjectsByDepartmentID, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Deparment Class // Find Active Department Production Email Projects By Department ID " + Ex.Message); 
+            }
+
+            return aFindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet;
+        }
+        public bool UpdateDepartmentProductionEmailProject(int intTransactionID, bool blnProjectActive)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateDeparmentProductionEmailProjectTableAdapter = new UpdateDepartmentProductionEmailProjectEntryTableAdapters.QueriesTableAdapter();
+                aUpdateDeparmentProductionEmailProjectTableAdapter.UpdateDepartmentProductionEmailProject(intTransactionID, blnProjectActive);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Update Department Production Email Project " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public bool InsertDepartmentProductionEmailProject(int intDepartmentID, string strProjectSuffix)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertDepartmentProductionEmailProjectTableAdapter = new InsertDepartmentProductionEmailProjectEntryTableAdapters.QueriesTableAdapter();
+                aInsertDepartmentProductionEmailProjectTableAdapter.InsertDepartmentProductionEmailProject(intDepartmentID, strProjectSuffix);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Insert Department Production Email Project " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public DepartmentProductionEmailProjectsDataSet GetDepartmentProductionEmailProjectsInfo()
+        {
+            try
+            {
+                aDepartmentProductionEmailProjectsDataSet = new DepartmentProductionEmailProjectsDataSet();
+                aDepartmentProductionEmailProjectsTableAdapter = new DepartmentProductionEmailProjectsDataSetTableAdapters.departmentproductionemailprojectsTableAdapter();
+                aDepartmentProductionEmailProjectsTableAdapter.Fill(aDepartmentProductionEmailProjectsDataSet.departmentproductionemailprojects);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Get Department Production Email Projects Info " + Ex.Message);
+            }
+
+            return aDepartmentProductionEmailProjectsDataSet;
+        }
+        public void UpdateDepartProductionEmailProjectsDB(DepartmentProductionEmailProjectsDataSet aDepartmentProductionEmailProjectsDataSet)
+        {
+            try
+            {
+                aDepartmentProductionEmailProjectsTableAdapter = new DepartmentProductionEmailProjectsDataSetTableAdapters.departmentproductionemailprojectsTableAdapter();
+                aDepartmentProductionEmailProjectsTableAdapter.Update(aDepartmentProductionEmailProjectsDataSet.departmentproductionemailprojects);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Update Department Production Email Projects DB " + Ex.Message);
+            }
+        }
+        public FindDepartmentProductionEmailByDepartmentIDDataSet FindDepartmentProductionEmailByDepartmentID(int intDepartmentID)
+        {
+            try
+            {
+                aFindDepartmentProductionEmailByDepartmentIDDataSet = new FindDepartmentProductionEmailByDepartmentIDDataSet();
+                aFindDepartmentProductionEmailByDepartmentIDTableAdapter = new FindDepartmentProductionEmailByDepartmentIDDataSetTableAdapters.FindDepartmentProductionEmailByDepartmentIDTableAdapter();
+                aFindDepartmentProductionEmailByDepartmentIDTableAdapter.Fill(aFindDepartmentProductionEmailByDepartmentIDDataSet.FindDepartmentProductionEmailByDepartmentID, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Find Department Production Email By Department ID " + Ex.Message);
+            }
+
+            return aFindDepartmentProductionEmailByDepartmentIDDataSet;
+        }
+        public bool RemoveDepartmentProuctionEmail(int intTransactionID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aRemoveDepartmentProductionEmailTableAdapter = new RemoveDepartmentProductionEmailEntryTableAdapters.QueriesTableAdapter();
+                aRemoveDepartmentProductionEmailTableAdapter.RemoveDepartmentProductionEmail(intTransactionID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Remove Department Production Email " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public bool InsertDepartmentProductionEmail(int intEmployeeID, int intDepartmentID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertDepartmedntProudctionEmailTableAdapter = new InsertDepartmentProductionEmailEntryTableAdapters.QueriesTableAdapter();
+                aInsertDepartmedntProudctionEmailTableAdapter.InsertDepartmentProductionEmail(intEmployeeID, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Insert Department Production Email " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public DepartmentProductionEmailDataSet GetDepartmentProductionEmailInfo()
+        {
+            try
+            {
+                aDepartmentProductionEmailDataSet = new DepartmentProductionEmailDataSet();
+                aDepartmentProductionEmailTableAdatper = new DepartmentProductionEmailDataSetTableAdapters.departmentproductionemailTableAdapter();
+                aDepartmentProductionEmailTableAdatper.Fill(aDepartmentProductionEmailDataSet.departmentproductionemail);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Get Department Production Email Info " + Ex.Message);
+            }
+
+            return aDepartmentProductionEmailDataSet;
+        }
+        public void UpdateDepartmentProductionEmailDB(DepartmentProductionEmailDataSet aDepartmentProductionEmailDataSet)
+        {
+            try
+            {
+                aDepartmentProductionEmailTableAdatper = new DepartmentProductionEmailDataSetTableAdapters.departmentproductionemailTableAdapter();
+                aDepartmentProductionEmailTableAdatper.Update(aDepartmentProductionEmailDataSet.departmentproductionemail);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Get Department Production Email Info " + Ex.Message);
+            }
+        }
         public FindDepartmentHourlyEmployeesDataSet FindDepartmentHourlyEmployees(string strDepartment)
         {
             try
