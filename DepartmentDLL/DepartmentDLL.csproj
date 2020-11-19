@@ -90,6 +90,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindDepartmentProductionEmailByDepartmentIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindSortedCustomerLinesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedCustomerLinesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindSortedDepartmentDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -227,6 +232,17 @@
     </None>
     <None Include="FindDepartmentProductionEmailByDepartmentIDDataSet.xss">
       <DependentUpon>FindDepartmentProductionEmailByDepartmentIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedCustomerLinesDataSet.xsc">
+      <DependentUpon>FindSortedCustomerLinesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedCustomerLinesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedCustomerLinesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedCustomerLinesDataSet.xss">
+      <DependentUpon>FindSortedCustomerLinesDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindSortedDepartmentDataSet.xsc">
       <DependentUpon>FindSortedDepartmentDataSet.xsd</DependentUpon>

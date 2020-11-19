@@ -57,6 +57,24 @@ namespace DepartmentDLL
         FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet aFindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet;
         FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSetTableAdapters.FindActiveDepartmentProductionEmailProjectsByDepartmentIDTableAdapter aFindActiveDepartmentProductionEmailProjectsByDepartmentIDTableAdapter;
 
+        FindSortedCustomerLinesDataSet aFindSortedCustomerLinesDataSet;
+        FindSortedCustomerLinesDataSetTableAdapters.FindSortedCustomerLinesTableAdapter aFindSortedCustomerLinesTableAdapter;
+
+        public FindSortedCustomerLinesDataSet FindSortedCustomerLines()
+        {
+            try
+            {
+                aFindSortedCustomerLinesDataSet = new FindSortedCustomerLinesDataSet();
+                aFindSortedCustomerLinesTableAdapter = new FindSortedCustomerLinesDataSetTableAdapters.FindSortedCustomerLinesTableAdapter();
+                aFindSortedCustomerLinesTableAdapter.Fill(aFindSortedCustomerLinesDataSet.FindSortedCustomerLines);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Department Class // Find Sorted Customer Lines " + Ex.Message);
+            }
+
+            return aFindSortedCustomerLinesDataSet;
+        }
         public FindActiveDepartmentProductionEmailProjectsByDepartmentIDDataSet FindActiveDepartmentProductionEmailProjectsByDepartmentID(int intDepartmentID)
         {
             try
@@ -288,14 +306,14 @@ namespace DepartmentDLL
 
             return aFindSortedDepartmentDataSet;
         }
-        public bool InsertDepartment(string strDepartment)
+        public bool InsertDepartment(string strDepartment, bool blnCustomerLine)
         {
             bool blnFatalError = false;
 
             try
             {
                 aInsertDepartmentTableAdapter = new InsertDepartmentEntryTableAdapters.QueriesTableAdapter();
-                aInsertDepartmentTableAdapter.InsertDepartment(strDepartment);
+                aInsertDepartmentTableAdapter.InsertDepartment(strDepartment, blnCustomerLine);
             }
             catch (Exception Ex)
             {
