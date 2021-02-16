@@ -60,6 +60,24 @@ namespace DepartmentDLL
         FindSortedCustomerLinesDataSet aFindSortedCustomerLinesDataSet;
         FindSortedCustomerLinesDataSetTableAdapters.FindSortedCustomerLinesTableAdapter aFindSortedCustomerLinesTableAdapter;
 
+        FindSortedProductionTypesDataSet aFindSortedProductionTypesDataSet;
+        FindSortedProductionTypesDataSetTableAdapters.FindSortedProductionTypesTableAdapter aFindSortedProductionTypesTableAdapter;
+
+        public FindSortedProductionTypesDataSet FindSortedProductionTypes()
+        {
+            try
+            {
+                aFindSortedProductionTypesDataSet = new FindSortedProductionTypesDataSet();
+                aFindSortedProductionTypesTableAdapter = new FindSortedProductionTypesDataSetTableAdapters.FindSortedProductionTypesTableAdapter();
+                aFindSortedProductionTypesTableAdapter.Fill(aFindSortedProductionTypesDataSet.FindSortedProductionTypes);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "The Department Class // Find Sorted Production Types " + Ex.Message);
+            }
+
+            return aFindSortedProductionTypesDataSet;
+        }
         public FindSortedCustomerLinesDataSet FindSortedCustomerLines()
         {
             try

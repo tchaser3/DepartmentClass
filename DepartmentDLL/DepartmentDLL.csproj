@@ -100,6 +100,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindSortedDepartmentDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindSortedProductionTypesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedProductionTypesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertDepartmentEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -254,6 +259,17 @@
     </None>
     <None Include="FindSortedDepartmentDataSet.xss">
       <DependentUpon>FindSortedDepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedProductionTypesDataSet.xsc">
+      <DependentUpon>FindSortedProductionTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedProductionTypesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedProductionTypesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedProductionTypesDataSet.xss">
+      <DependentUpon>FindSortedProductionTypesDataSet.xsd</DependentUpon>
     </None>
     <None Include="InsertDepartmentEntry.xsc">
       <DependentUpon>InsertDepartmentEntry.xsd</DependentUpon>
